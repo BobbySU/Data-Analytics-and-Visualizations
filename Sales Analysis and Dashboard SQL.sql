@@ -21,6 +21,7 @@ SELECT
     od.unit_price AS "Unit Price",
     od.quantity AS "Quantity",
     od.discount AS "Discount",
+    o.ship_via AS "Shipper ID",
     ROUND(
         (od.unit_price * od.quantity * (1 - od.discount))::numeric,
         2
